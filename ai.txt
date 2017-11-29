@@ -1,0 +1,143 @@
+//**public class Option {
+
+
+
+public void setPathos(){
+Scanner index = new Scanner(System.in);
+System.out.println("On a scale of 1 to 10 answer the following.");
+System.out.println("How good would this action make you feel?");  
+int joy = index.nextInt();
+System.out.println("Would you regret this action?");
+int regret = index.nextInt();
+}
+
+public int getPathos(int joy, int regret){
+int emotionalIndex = (joy - regret);
+return emotionalIndex;
+}
+
+
+public int ethos(){
+Scanner index = new Scanner(System.in);
+System.out.println("On a scale of 1 to 10 answer the following.");
+System.out.println("Is it legal globally?");
+int legal = index.nextInt();
+System.out.println("Is there opposition?");
+int bias = index.nextInt();
+int ethicalIndex = (legal - bias);
+return ethicalIndex;
+}
+
+
+public int logos() {
+Scanner index = new Scanner(System.in);
+System.out.println("On a scale of 1 to 10 answer the following.");
+System.out.println("How many people will this help?");
+int numppl = index.nextInt();
+System.out.println("Will this help everyone?");
+int help = index.nextInt();
+System.out.println("How many people will this hurt?");
+int numhurt = index.nextInt();
+System.out.println("How bad will this hurt them?");
+int hurt = index.nextInt(); 
+int logicalIndex = ((numppl * help) - (numhurt * hurt));
+return logicalIndex;
+}
+
+
+
+public static int action(pathos, ethos, logos){
+int prediction;
+
+if (ethos >= (logos+pathos)){
+prediction = ethos;
+}else if (logos >= pathos){
+prediction = logos;
+}else {
+prediction = pathos;
+}
+return action;
+}
+
+};
+
+
+
+
+
+
+
+
+
+
+
+public static void main(String[]arg){
+
+string mission = "To pick the best option";
+
+Option class = new Option;
+
+public int decision(int opt1, int opt2){
+return outcome;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Evaluates all outcomes of object1
+option1[]{
+
+
+}
+
+//Evaluates all outcomes of object2
+option2[]{
+
+}
+
+
+
+
+if(option1 > option2){
+	execute option1;
+}else{
+	execute option2;
+}
+
+
+public class anaylze(){
+	Scanner input = new Scanner(in);
+	Scanner search = new Scanner();
+	
+	search.in = 
+
+}
+
+public class decision(){
+	private option1;
+	
+
+};
+
+}
+
+*/

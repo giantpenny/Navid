@@ -1,0 +1,103 @@
+<body> Dosing Calculator
+
+&nbsp;
+
+    <div id="prod1">
+    <h3>Product 1</h3>
+    <form>
+        <h3>Product 1 THC</h3>
+        <input id="p1thc" type="number">
+    </form>
+    <form>
+        <h3>Product 1 CBD</h3>
+        <input id="p1cbd" type="number">
+    </form>
+</div>
+
+    <div id="prod2">
+    <h3>Product 2</h3>
+    <form>
+        <h3>Product 2 THC</h3>
+        <input id="p2thc" type="number">
+    </form>
+    <form>
+        <h3>Product 2 CBD</h3>
+        <input id="p2cbd" type="number">
+    </form>
+</div>
+
+    <div id="presc">
+    <h3>Prescription Dose</h3>
+    <form>
+        <h3>Daily THC</h3>
+        <input id="dosethc" type="number">
+    </form>
+    <form>
+        <h3>Product 2 CBD</h3>
+        <input id="dosecbd" type="number">
+    </form>
+</div>
+
+    <div id="button"><input id="calculate" onclick="myfunction();myfunction2();" type="button" value="Calculate"></div>
+
+    <script type="text/javascript">
+    var p1thc;
+    var p1cbd;
+    var p2thc;
+    var p2cbd;
+    var dosethc;
+    var dosecbd;
+    function matrixP1(){
+        var p1thc = document.getElementById("p1thc").value;
+        var p1cbd = document.getElementById("p1cbd").value;
+        var p2thc = document.getElementById("p2thc").value;
+        var p2cbd = document.getElementById("p2cbd").value;
+        var dosethc = document.getElementById("dosethc").value;
+        var dosecbd = document.getElementById("dosecbd").value;
+        var inv = ((p1thc*p2cbd)-(p1cbd*p2thc));
+        var p1ti = ((1/inv)*p2cbd);
+        var p2ti = ((1/inv)*(0-p2thc));
+        var p1ci = ((1/inv)*(0-p1cbd));
+        var p2ci = ((1/inv)*p1thc);
+        var p1dose = Math.round(((p1ti*dosethc)+(p2ti*dosecbd))* 100) / 100;
+        var p2dose = Math.round(((p1ci*dosethc)+(p2ci*dosecbd))* 100) / 100;
+        return (p1dose);
+    };
+    function matrixP2(){
+        var p1thc = document.getElementById("p1thc").value;
+        var p1cbd = document.getElementById("p1cbd").value;
+        var p2thc = document.getElementById("p2thc").value;
+        var p2cbd = document.getElementById("p2cbd").value;
+        var dosethc = document.getElementById("dosethc").value;
+        var dosecbd = document.getElementById("dosecbd").value;
+        var inv = ((p1thc*p2cbd)-(p1cbd*p2thc));
+        var p1ti = ((1/inv)*p2cbd);
+        var p2ti = ((1/inv)*(0-p2thc));
+        var p1ci = ((1/inv)*(0-p1cbd));
+        var p2ci = ((1/inv)*p1thc);
+        var p1dose = Math.round(((p1ti*dosethc)+(p2ti*dosecbd))* 100) / 100;
+        var p2dose = Math.round(((p1ci*dosethc)+(p2ci*dosecbd))* 100) / 100;
+        return (p2dose);
+    };
+    function myfunction () {
+        var theval = matrixP1();
+        document.getElementById("amnt1").value = theval;
+    }
+    function myfunction2 () {
+        var theval = matrixP2();
+        document.getElementById("amnt2").value = theval;
+    }
+</script>
+
+<div id="amount">
+    <form>
+        <h3>Take this much of Product 1:</h3>
+        <input id="amnt1" type="number">
+    </form>
+    <form>
+        <h3>Take this much of Product 2:</h3>
+        <input id="amnt2" type="number">
+    </form>
+</div>
+&nbsp;
+</body>

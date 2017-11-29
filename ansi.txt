@@ -1,0 +1,56 @@
+string Mission = "To make the best option";
+string[] laws {
+	Pathos	help;
+	Ethos	better;
+	Logos	sense;
+}
+
+
+
+
+
+
+
+
+
+int[] decision{
+	int[] option1;
+	int[] option2;
+}
+
+
+//Evaluates all outcomes of object1
+option1[]{
+
+
+}
+
+//Evaluates all outcomes of object2
+option2[]{
+
+}
+
+
+
+
+if(option1 > option2){
+	execute option1;
+}else{
+	execute option2;
+}
+
+
+public class anaylze(){
+	Scanner input = new Scanner(in);
+	Scanner search = new Scanner(in);
+	
+	search.in = 
+
+}
+
+public class decision(){
+	private option1;
+	
+
+};
+
